@@ -47,13 +47,17 @@
             event.preventDefault();
 
           var fullName=document.getElementById('name').value;
-          var number=document.getElementById('Number').value;
-          var email=document.getElementById('email').value;
+          // var number=document.getElementById('Number').value;
+          // var email=document.getElementById('email').value;
 
-          localStorage.setItem('name',fullName);
-          localStorage.removeItem(name);
-          localStorage.setItem('email',email);
-          localStorage.setItem('number',number);
+        var myObj={
+          name:document.getElementById('name').value,
+          emailobj:document.getElementById('Number').value,
+          no:document.getElementById('email').value
+        };
+        let myObjSerial=JSON.stringify(myObj);
+        localStorage.setItem(fullName,myObjSerial);
+          
         }
     </script>
   </body>
